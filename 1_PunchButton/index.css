@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Special+Elite&family=Titan+One&display=swap");
+
+.punch-button {
+    width: 230px;
+    background-color: white;
+    border-radius: 8px;
+    padding-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.punch-button__inner {
+    font-size: 28px;
+    color: white;
+    margin: 6px;
+    padding: 0;
+    border-radius: 8px;
+    background-color: #584571;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.punch-button__inner-front {
+    height: 50px;
+    width: 100%;
+    font-family: Titan One, sans-serif;
+    border-radius: 8px;
+    transform: translate(0, -6px);
+    will-change: transform;
+    background-color: #9d52e0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.punch-button__inner-front:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 400%;
+    width: 200%;
+    top: 0;
+    left: 0;
+    transform: rotate(30deg) translate(-40%, 45%);
+}
+
+.punch-button__base {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 66.8px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    pointer-events: all;
+}
+
+.punch-button__base:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.15);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+body {
+    background: center url("https://i.postimg.cc/85hwFt9f/background.png");
+}
