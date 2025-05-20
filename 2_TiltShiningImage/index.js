@@ -1,3 +1,5 @@
+import {lerp} from "../utils/math";
+
 const card = document.querySelector('.reflecting-card__card')
 const reflect = document.querySelector('.reflecting-card__reflect')
 
@@ -6,15 +8,10 @@ const MAX = 40
 const target = {x: 0, y: 0}
 const current = {x: 0, y: 0}
 
-const lerp = (x, y, a) => x * (1 - a) + y * a;
-
 const onMouseMove = (ev) => {
     const rect = card.getBoundingClientRect();
-
     target.x = ((ev.clientX - rect.left) / rect.width) - 0.5;
     target.y = ((ev.clientY - rect.top) / rect.height) - 0.5;
-    console.log(target)
-
 }
 
 const onMouseLeave = () => {
