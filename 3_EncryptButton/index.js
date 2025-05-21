@@ -58,7 +58,6 @@ const reset = () => {
     i = 0
 }
 
-
 const onMouseEnter = () => {
     shuffle()
     replaceText()
