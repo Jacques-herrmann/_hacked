@@ -1,0 +1,52 @@
+.wipe-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    height: 400px;
+    transform: translate(-50%, -50%);
+}
+
+.wipe-screen__canvas, .wipe-screen__image, .wipe-screen__tutorial {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.wipe-screen__canvas {
+    z-index: 2;
+    touch-action: none;
+}
+
+.wipe-screen__tutorial {
+    z-index: 3;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.wipe-screen__lottie {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    transform: translate(calc(-50% + 20px), calc(-50% + 20px));
+}
+
+.wipe-screen__lottie path {
+    fill: #fff;
+    stroke: #fff;
+}
+
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: center url('https://i.postimg.cc/85hwFt9f/background.png');
+}
