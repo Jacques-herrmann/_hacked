@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.sticky-animated-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+}
+
+.sticky-animated-card__scroll {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.sticky-animated-card__inner {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    padding: 200px 10% 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    will-change: transform;
+}
+
+.sticky-animated-card__column {
+    position: relative;
+    width: 33%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sticky-animated-card__image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.sticky-animated-card__card {
+    position: relative;
+    opacity: 0;
+    height: 280px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 22px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+}
+
+.sticky-animated-card__column--right > .sticky-animated-card__card {
+    position: absolute;
+    width: 100%;
+}
+
+.sticky-animated-card__card h2 {
+    max-width: calc(100% - 40px);
+    font-size: 34px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.sticky-animated-card__description {
+    font-family: "Open Sans", sans-serif;
+    max-width: calc(100% - 40px);
+    font-size: 30px;
+    color: #fff;
+}
+
+.sticky-animated-card__icon {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 40px;
+    color: #fff
+}
+
+.sticky-animated-card__tag {
+    position: absolute;
+    bottom: 22px;
+    left: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    width: fit-content;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    /*background: center url('https://i.postimg.cc/85hwFt9f/background.png');*/
+    background: black;
+}
+
+* {
+    font-family: "Audiowide", sans-serif;
+    line-height: 110%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

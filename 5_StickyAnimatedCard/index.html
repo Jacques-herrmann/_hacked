@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>#5 Sticky Animated Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.3/dist/lenis.min.js"></script>
+
+    <script type="module" crossorigin src="./index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet"/>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<div class="sticky-animated-card">
+    <div class="sticky-animated-card__scroll">
+        SCROLL DOWN
+    </div>
+    <div class="sticky-animated-card__inner">
+        <div class="sticky-animated-card__column sticky-animated-card__column--left">
+            <div class="sticky-animated-card__card">
+                <span class="sticky-animated-card__icon material-symbols-outlined">smart_toy</span>
+                <h2 class="sticky-animated-card__title">Voluptatem cum voluptatem aperiam.</h2>
+                <p class="sticky-animated-card__tag">Corporis</p>
+            </div>
+            <div class="sticky-animated-card__card">
+                <span class="sticky-animated-card__icon material-symbols-outlined">videogame_asset</span>
+                <h2 class="sticky-animated-card__title">Perspiciatis saepe aperiam.</h2>
+                <p class="sticky-animated-card__tag">Porro</p>
+            </div>
+            <div class="sticky-animated-card__card">
+                <span class="sticky-animated-card__icon material-symbols-outlined">rewarded_ads</span>
+                <h2 class="sticky-animated-card__title">Non et aliquid pariatur saepe aperiam.</h2>
+                <p class="sticky-animated-card__tag">Commodi</p>
+            </div>
+        </div>
+        <div class="sticky-animated-card__column">
+            <img class="sticky-animated-card__image"
+                 src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGNhcmR8ZW58MHx8fHwxNjg3NTY5NzA1&ixlib=rb-4.0.3&q=80&w=1080"
+                 alt=""/>
+        </div>
+        <div class="sticky-animated-card__column sticky-animated-card__column--right">
+            <div class="sticky-animated-card__card">
+                <p class="sticky-animated-card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ab accusantium ad alias aliquid amet animi.</p>
+            </div>
+            <div class="sticky-animated-card__card">
+                <p class="sticky-animated-card__description">Lorem ipsum dolor sit amet, consectetur.</p>
+            </div>
+            <div class="sticky-animated-card__card">
+                <p class="sticky-animated-card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ab accusantium ad alias aliquid amet animi architecto aspernatur at aut blanditiis.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
