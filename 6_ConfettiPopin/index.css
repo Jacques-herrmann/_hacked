@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Special+Elite&family=Titan+One&display=swap");
+
+.popin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.popin__sprite {
+    position: absolute;
+    width: 50%;
+    top: -26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 4;
+}
+
+.popin__inner {
+    position: absolute;
+    width: 450px;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    padding-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.popin__inner > * {
+    opacity: 0;
+    max-width: calc(100% - 40px);
+}
+
+.popin__inner h2 {
+    font-family: 'Titan One', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 13%;
+    color: #9d52e0;
+    width: 100%;
+    text-align: center;
+}
+
+.popin__text {
+    font-weight: 300 !important;
+    display: block;
+    color: #222;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.popin__cta {
+    height: 50px;
+    width: 180px;
+    margin-top: 8px;
+    z-index: 6;
+    font-family: 'Titan One', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #9d52e0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.popin__cta:hover {
+    background-color: #7c3bb2;
+}
+
+#confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+body {
+    background: center url("https://i.postimg.cc/85hwFt9f/background.png");
+}
+
+.replay {
+    position: absolute;
+    z-index: 10;
+    height: 50px;
+    width: 180px;
+    cursor: pointer;
+}
+
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: center url('https://i.postimg.cc/85hwFt9f/background.png');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Chakra Petch', sans-serif;
+}
