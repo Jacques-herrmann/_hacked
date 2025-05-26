@@ -1,0 +1,14 @@
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: center url('https://i.postimg.cc/85hwFt9f/background.png');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
