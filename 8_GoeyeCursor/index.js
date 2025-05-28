@@ -17,6 +17,7 @@ const state = {
 const L = 0.15
 const D = 8
 const dots = []
+let primitive, timeline
 
 const init = () => {
     for (let i = 0; i < D; i++) {
@@ -43,7 +44,6 @@ const onHover = (e) => {
         ease: 'elastic.out(1, 0.3)',
     });
 
-    let primitive, timeline
 
     switch (filter) {
         case 'filter':
@@ -128,6 +128,10 @@ const onHover = (e) => {
 }
 
 const onHoverOut = () => {
+    if (timeline) {
+        timeline.kill();
+        timeline = null;
+    }
     gsap.to(circle, {
         duration: 0.15,
         r: 0,
