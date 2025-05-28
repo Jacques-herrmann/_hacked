@@ -38,13 +38,6 @@ const onMouseMove = (e) => {
 
 const onHover = (e) => {
     const filter = e.target.dataset.hover;
-    gsap.to(circle, {
-        duration: 0.5,
-        r: 30,
-        ease: 'elastic.out(1, 0.3)',
-    });
-
-
     switch (filter) {
         case 'filter':
             primitive = {turbulence: 0};
@@ -70,7 +63,13 @@ const onHover = (e) => {
                     ease: "steps(10)",
                     startAt: {turbulence: 0.08},
                     turbulence: 0,
-                });
+                })
+                .to(circle, {
+                    duration: 0.5,
+                    r: 30,
+                    ease: 'elastic.out(1, 0.3)',
+                }, 0);
+            ;
             break;
         case 'filter-2':
             primitive = {scale: 0};
@@ -98,7 +97,12 @@ const onHover = (e) => {
                     duration: 0.4,
                     ease: "Back.easeOut",
                     scale: 0,
-                });
+                })
+                .to(circle, {
+                    duration: 0.5,
+                    r: 30,
+                    ease: 'elastic.out(1, 0.3)',
+                }, 0);
             break;
         case 'filter-3':
             primitive = {turbulence: 0};
@@ -123,14 +127,21 @@ const onHover = (e) => {
                     duration: 0.35,
                     startAt: {turbulence: 0.08},
                     turbulence: 1,
-                });
+                })
+                .to(circle, {
+                    duration: 0.5,
+                    r: 30,
+                    ease: 'elastic.out(1, 0.3)',
+                }, 0);
     }
 }
 
 const onHoverOut = () => {
     if (timeline) {
+        console.log('timeline exists');
         timeline.kill();
         timeline = null;
+        circle.style.filter = 'none';
     }
     gsap.to(circle, {
         duration: 0.15,
