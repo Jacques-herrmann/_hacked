@@ -12,90 +12,100 @@
 </head>
 <body>
 <div class="cursor">
-    <!--    <svg-->
-    <!--            class="cursor__inner cursor__inner&#45;&#45;svg"-->
-    <!--            width="120"-->
-    <!--            height="120"-->
-    <!--            viewBox="0 0 120 120"-->
+    <svg
+            class="cursor__inner cursor__inner--svg"
+            width="120"
+            height="120"
+            viewBox="0 0 120 120"
 
-    <!--    >-->
-    <!--        <defs>-->
-    <!--            <filter-->
-    <!--                    id="filter"-->
-    <!--                    x="-50%"-->
-    <!--                    y="-50%"-->
-    <!--                    width="200%"-->
-    <!--                    height="200%"-->
-    <!--                    filterUnits="objectBoundingBox"-->
-    <!--            >-->
-    <!--                <feTurbulence-->
-    <!--                        type="fractalNoise"-->
-    <!--                        baseFrequency="0"-->
-    <!--                        numOctaves="1"-->
-    <!--                        result="warp"-->
-    <!--                />-->
-    <!--                <feDisplacementMap-->
-    <!--                        xChannelSelector="R"-->
-    <!--                        yChannelSelector="G"-->
-    <!--                        scale="30"-->
-    <!--                        in="SourceGraphic"-->
-    <!--                        in2="warpOffset"-->
-    <!--                />-->
-    <!--            </filter>-->
-    <!--            <filter-->
-    <!--                    id="cardio"-->
-    <!--                    x="-50%"-->
-    <!--                    y="-50%"-->
-    <!--                    width="200%"-->
-    <!--                    height="200%"-->
-    <!--                    filterUnits="objectBoundingBox"-->
-    <!--            >-->
-    <!--                <feTurbulence-->
-    <!--                        type="fractalNoise"-->
-    <!--                        baseFrequency="0.15 0.02"-->
-    <!--                        numOctaves="3"-->
-    <!--                        result="warp"-->
-    <!--                />-->
-    <!--                <feDisplacementMap-->
-    <!--                        xChannelSelector="R"-->
-    <!--                        yChannelSelector="G"-->
-    <!--                        scale="0"-->
-    <!--                        in="SourceGraphic"-->
-    <!--                        in2="warp"-->
-    <!--                />-->
-    <!--            </filter>-->
-    <!--            <filter-->
-    <!--                    id="videogame"-->
-    <!--                    x="-50%"-->
-    <!--                    y="-50%"-->
-    <!--                    width="200%"-->
-    <!--                    height="200%"-->
-    <!--                    filterUnits="objectBoundingBox"-->
-    <!--            >-->
-    <!--                <feTurbulence-->
-    <!--                        type="fractalNoise"-->
-    <!--                        baseFrequency="0"-->
-    <!--                        numOctaves="6"-->
-    <!--                        result="warp"-->
-    <!--                />-->
-    <!--                <feDisplacementMap-->
-    <!--                        xChannelSelector="R"-->
-    <!--                        yChannelSelector="G"-->
-    <!--                        scale="25"-->
-    <!--                        in="SourceGraphic"-->
-    <!--                        in2="warpOffeset"-->
-    <!--                />-->
-    <!--            </filter>-->
-    <!--        </defs>-->
-    <!--        <circle-->
-    <!--                class="cursor__inner&#45;&#45;circle"-->
-    <!--                cx="60"-->
-    <!--                cy="60"-->
-    <!--                r="30"-->
-    <!--        />-->
-    <!--        <circle class="cursor__inner&#45;&#45;dot" cx="60" cy="60" r="5"/>-->
-    <!--    </svg>-->
+    >
+        <defs>
+            <filter
+                    id="filter"
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                    filterUnits="objectBoundingBox"
+            >
+                <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0"
+                        numOctaves="1"
+                        result="warp"
+                />
+                <feDisplacementMap
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                        scale="30"
+                        in="SourceGraphic"
+                        in2="warpOffset"
+                />
+            </filter>
+            <filter
+                    id="filter2"
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                    filterUnits="objectBoundingBox"
+            >
+                <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0.15 0.02"
+                        numOctaves="3"
+                        result="warp"
+                />
+                <feDisplacementMap
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                        scale="0"
+                        in="SourceGraphic"
+                        in2="warp"
+                />
+            </filter>
+            <filter
+                    id="filter3"
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                    filterUnits="objectBoundingBox"
+            >
+                <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0"
+                        numOctaves="6"
+                        result="warp"
+                />
+                <feDisplacementMap
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                        scale="25"
+                        in="SourceGraphic"
+                        in2="warpOffeset"
+                />
+            </filter>
+        </defs>
+        <circle
+                class="cursor__inner--circle"
+                cx="60"
+                cy="60"
+                r="0"
+        />
+    </svg>
     <div class="cursor__inner cursor__inner--dot"></div>
+</div>
+<div class="hover-me">
+    <div class="hover-me__item" data-hover="filter">
+        <span class="hover-me__text">HOVER ME</span>
+    </div>
+    <div class="hover-me__item" data-hover="filter-2">
+        <span class="hover-me__text">HOVER ME</span>
+    </div>
+    <div class="hover-me__item" data-hover="filter-3">
+        <span class="hover-me__text">HOVER ME</span>
+    </div>
 </div>
 </body>
 </html>
