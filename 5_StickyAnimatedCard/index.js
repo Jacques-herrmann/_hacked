@@ -1,6 +1,7 @@
 import {clamp, mapRange} from "https://jacques-herrmann.github.io/_hacked/utils/math.js";
 
 const parent = document.querySelector('.sticky-animated-card');
+const title = document.querySelector('.sticky-animated-card__scroll-title');
 const inner = document.querySelector('.sticky-animated-card__inner');
 const left = document.querySelector('.sticky-animated-card__column--left');
 const right = document.querySelector('.sticky-animated-card__column--right');
@@ -67,7 +68,15 @@ class AnimationSteps {
     }
 }
 
-
+const titleTl = gsap.timeline({paused: true});
+titleTl.fromTo(title, {
+    opacity: 1,
+    scale: 1,
+}, {
+    opacity: 0,
+    scale: 0.85,
+    duration: 1,
+})
 const leftCards = Array.from(left.querySelectorAll('.sticky-animated-card__card'));
 const rightCards = Array.from(right.querySelectorAll('.sticky-animated-card__card'));
 const cards = [...leftCards].map((left) => {
@@ -81,6 +90,8 @@ const onResize = () => {
 }
 
 const onScroll = (ev) => {
+    const titlePercent = clamp(mapRange(window.scrollY, 0, 500, 0, 1), 0, 1);
+    titleTl.time(titlePercent);
     const percent = clamp(mapRange(window.scrollY, bounds.top, height - window.innerHeight, 0, 1), 0, 1)
     cards.forEach((card, i) => {
         card.update(clamp(mapRange(percent, i / cards.length, (i + 1) / cards.length, 0, 1), 0, 1));

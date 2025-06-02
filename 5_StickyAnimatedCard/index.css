@@ -15,7 +15,13 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    color: #fff;
+}
+
+.sticky-animated-card__scroll-title {
+    position: fixed;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .sticky-animated-card__inner {
@@ -40,8 +46,10 @@
 
 .sticky-animated-card__image {
     width: 100%;
+    aspect-ratio: 0.65;
     object-fit: cover;
     border-radius: 14px;
+    border: 2px solid black;
 }
 
 .sticky-animated-card__card {
@@ -54,31 +62,38 @@
     gap: 10px;
     padding: 15px 22px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: #9dc4f5;
+    /*box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);*/
+    /*backdrop-filter: blur(2px);*/
+    /*-webkit-backdrop-filter: blur(2px);*/
+    /*border: 1px solid rgba(255, 255, 255, 0.18);*/
     overflow: hidden;
+}
+
+.sticky-animated-card__card:nth-child(2) {
+    background: #fbe74e;
+}
+
+.sticky-animated-card__card:nth-child(3) {
+    background: #ffcadc;
 }
 
 .sticky-animated-card__column--right > .sticky-animated-card__card {
     position: absolute;
     width: 100%;
+    background: #ecefec;
 }
 
 .sticky-animated-card__card h2 {
     max-width: calc(100% - 40px);
     font-size: 34px;
     font-weight: 400;
-    color: #fff;
 }
 
 .sticky-animated-card__description {
     font-family: "Open Sans", sans-serif;
     max-width: calc(100% - 40px);
-    font-size: 30px;
-    color: #fff;
+    font-size: 24px;
 }
 
 .sticky-animated-card__icon {
@@ -86,7 +101,6 @@
     top: 16px;
     right: 20px;
     font-size: 40px;
-    color: #fff
 }
 
 .sticky-animated-card__tag {
@@ -94,11 +108,11 @@
     bottom: 22px;
     left: 20px;
     font-family: "Open Sans", sans-serif;
-    font-weight: bold;
-    color: #fff;
-    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px 10px;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.8);
     width: fit-content;
 }
 
@@ -107,11 +121,12 @@ body {
     height: 100vh;
     width: 100%;
     /*background: center url('https://i.postimg.cc/85hwFt9f/background.png');*/
-    background: black;
+    background: #f4f4f4;
 }
 
 * {
-    font-family: "Audiowide", sans-serif;
+    /*font-family: "Audiowide", sans-serif;*/
+    font-family: "Open Sans", sans-serif;
     line-height: 110%;
     box-sizing: border-box;
     margin: 0;

@@ -1,4 +1,4 @@
-import {lerp} from "../utils/math";
+import {lerp} from "https://jacques-herrmann.github.io/_hacked/utils/math.js";
 
 const card = document.querySelector('.reflecting-card__card')
 const reflect = document.querySelector('.reflecting-card__reflect')
@@ -25,7 +25,8 @@ const tick = () => {
     current.x = lerp(current.x, target.x, L)
     current.y = lerp(current.y, target.y, L)
 
-    card.style.transform = `translate(-50%, -50%) rotateX(${-MAX * current.y}deg) rotateY(${MAX * current.x}deg)`
+    card.style.transform = `translate(-50%, -50%)  rotateY(${MAX * current.x}deg) rotateX(${-MAX * current.y}deg)`
+    // card.style.transform = `translate(-50%, -50%) rotateX(${-MAX * current.y}deg) rotateY(${MAX * current.x}deg)`
     reflect.style.opacity = 0.5 * Math.abs(current.x)
 }
 
