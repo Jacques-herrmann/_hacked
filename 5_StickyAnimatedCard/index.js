@@ -38,7 +38,7 @@ class AnimationSteps {
             duration: 0.3,
         }, 0.5)
         this.tl.to(this.left, {
-            height: 75,
+            height: '4rem',
             duration: 0.4,
         }, 0.6)
 

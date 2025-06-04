@@ -14,14 +14,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
 }
 
 .sticky-animated-card__scroll-title {
+    width: 100%;
     position: fixed;
     top: 350px;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    text-align: center;
 }
 
 .sticky-animated-card__inner {
@@ -31,13 +33,14 @@
     padding: 200px 10% 0;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 2.4rem;
     will-change: transform;
 }
 
 .sticky-animated-card__column {
     position: relative;
     width: 33%;
+    min-width: 190px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -46,7 +49,7 @@
 
 .sticky-animated-card__image {
     width: 100%;
-    aspect-ratio: 0.65;
+    aspect-ratio: 0.7;
     object-fit: cover;
     border-radius: 14px;
     border: 2px solid black;
@@ -55,18 +58,15 @@
 .sticky-animated-card__card {
     position: relative;
     opacity: 0;
-    height: 280px;
+    height: 16rem;
+    max-width: 380px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     gap: 10px;
-    padding: 15px 22px;
+    padding: 0.8rem 1rem;
     border-radius: 15px;
     background: #9dc4f5;
-    /*box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);*/
-    /*backdrop-filter: blur(2px);*/
-    /*-webkit-backdrop-filter: blur(2px);*/
-    /*border: 1px solid rgba(255, 255, 255, 0.18);*/
     overflow: hidden;
 }
 
@@ -78,6 +78,10 @@
     background: #ffcadc;
 }
 
+.sticky-animated-card__column--right, .sticky-animated-card__column--left {
+    max-width: 380px;
+}
+
 .sticky-animated-card__column--right > .sticky-animated-card__card {
     position: absolute;
     width: 100%;
@@ -86,33 +90,33 @@
 
 .sticky-animated-card__card h2 {
     max-width: calc(100% - 40px);
-    font-size: 34px;
+    font-size: 1.4rem;
     font-weight: 400;
+    word-wrap: break-word;
 }
 
 .sticky-animated-card__description {
     font-family: "Open Sans", sans-serif;
-    max-width: calc(100% - 40px);
-    font-size: 24px;
+    font-size: 1.2rem;
 }
 
 .sticky-animated-card__icon {
     position: absolute;
-    top: 16px;
+    top: 0.75rem;
     right: 20px;
-    font-size: 40px;
+    font-size: 2.2rem;
 }
 
 .sticky-animated-card__tag {
     position: absolute;
-    bottom: 22px;
-    left: 20px;
+    bottom: 1.2rem;
+    left: 24px;
     font-family: "Open Sans", sans-serif;
     font-weight: 500;
-    font-size: 14px;
-    padding: 6px 10px;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.5);
     width: fit-content;
 }
 
@@ -122,6 +126,10 @@ body {
     width: 100%;
     /*background: center url('https://i.postimg.cc/85hwFt9f/background.png');*/
     background: #f4f4f4;
+}
+
+html {
+    font-size: clamp(16px, 2vw, 24px);
 }
 
 * {
