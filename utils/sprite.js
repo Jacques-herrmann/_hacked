@@ -35,7 +35,7 @@ class SpriteSheetAnimation {
 
 class SpriteSheet {
     constructor(domElement, options = {}) {
-        this.options = Object.assign({}, options, OPTIONS);
+        this.options = Object.assign({}, OPTIONS, options);
 
         this.canvas = domElement;
         this.context = this.canvas.getContext('2d');
